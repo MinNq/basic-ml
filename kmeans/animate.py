@@ -3,13 +3,22 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from kmeans import KMeans
 
-#plt.style.use('dark_background')
-plt.style.use('seaborn')
+
+MODE = 'light' # either 'light' or 'dark'
+if MODE == 'dark':
+	plt.style.use('dark_background')
+else:
+	plt.style.use('seaborn')
+
+colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728']
 
 
 np.random.seed(0)
 
-# generating data
+'''
+DATA GENERATION
+'''
+
 X = []
 means = [[.7, .8], [-.2, -.2], [1, -1], [-1, 1]]
 for index in range(4):
@@ -20,13 +29,14 @@ k = KMeans(n_clusters = 4)
 
 k.fit(X)
 
+
 '''
-animation
+ANIMATION
 '''
 
 # preparing figure and axes
 fig, axs = plt.subplots(1, 2, figsize = (8, 4))
-plt.subplots_adjust(top = .8, bottom = .15, wspace = .3)
+plt.subplots_adjust(top = .8, bottom = .15, wspace = .4)
 
 axs[0].set_xlabel('Feature 1')
 axs[0].set_ylabel('Feature 2')
@@ -37,9 +47,9 @@ axs[1].set_ylim(k.inertia_log[k.n_iter_ - 1] - 0.05*k.inertia_log[0],
 				1.05*k.inertia_log[0])
 axs[1].set_xlabel('Iteration')
 axs[1].set_ylabel('Within-cluster sum of squares')
-#axs[1].grid(color = 'dimgray')
+if MODE == 'dark':
+	axs[1].grid(color = 'dimgray')
 
-colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728']
 
 # initializing subplots
 scatters = []
