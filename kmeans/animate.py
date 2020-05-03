@@ -25,7 +25,7 @@ animation
 '''
 
 # preparing figure and axes
-fig, axs = plt.subplots(1, 2, figsize = (9, 4.5))
+fig, axs = plt.subplots(1, 2, figsize = (8, 4))
 plt.subplots_adjust(top = .8, bottom = .15, wspace = .3)
 
 axs[0].set_xlabel('Feature 1')
