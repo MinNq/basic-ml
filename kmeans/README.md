@@ -1,3 +1,3 @@
 # k-means clustering
 
-![kmeans](https://i.imgur.com/IZFaSXI.gif)
+![kmeans](https://i.imgur.com/onFPhuZ.gif)
