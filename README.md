@@ -7,5 +7,4 @@ Implementation and visualization of basic machine learning algorithms
 
 ## Example
 
-**k-means clustering**
 ![kmeans](https://i.imgur.com/6c4lXYF.gif)
