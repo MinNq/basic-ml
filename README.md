@@ -3,7 +3,7 @@
 Implementation and visualization of basic machine learning algorithms
 
 ## Contents
-- [k-means clustering](https://github.com/MinNq/basic-ml/kmeans/)
+- [k-means clustering](https://github.com/MinNq/basic-ml/tree/master/kmeans)
 
 ## Example
 
